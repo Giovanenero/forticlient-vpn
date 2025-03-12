@@ -25,3 +25,10 @@ if [[ -f "requirements.txt" ]]; then
 else
     echo "Arquivo requirements.txt não encontrado."
 fi
+
+if [[ -f "/opt/forticlient-sslvpn/64bit/helper/setup" ]]; then
+    echo "Executando configuração inicial do FortiClient..."
+    /opt/forticlient-sslvpn/64bit/helper/setup
+else
+    echo "FortiClient não encontrado! Verifique se foi instalado corretamente."
+fi
